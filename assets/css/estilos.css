@@ -1,0 +1,476 @@
+/* practica 4 CSS*/
+
+/* los cambios de esta practica estan comentadas en mayusculas */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box; 
+}
+
+.menu-derecho {
+    float: right;
+    word-spacing: 16px;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    margin-right: 20px;
+    text-decoration: none;
+}
+.menu-derecho a {
+    text-decoration: none;  
+    border-radius: 2px;
+}
+.menu-derecho a:hover {
+    background-color: #1886A4;
+    color: #eee;
+    padding: 2px;
+}
+.menu-derecho a:active {
+    background-color:  #1886A4;
+    color: #EEE;
+}
+/*estilo mouse over link*/
+a:active {
+    color:#1c411c  
+}
+
+/*estilo logo-enlace*/
+.logo-enlace img {
+    width: auto;
+    height: 150px;
+}
+
+/*estilo header*/
+/*se solapaban los 2 header*/
+.header {
+    background-color:  #fff7e4;
+    clear: both;
+}
+
+/*espacio entre las líneas*/
+body {
+    line-height: 1.6;
+}
+
+/*estilo  nav*/
+nav {
+    position: sticky;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);/*4.6.1 SOMBRAS*/
+}
+
+
+nav ul {
+    list-style: none;
+    text-align: center;
+    padding: 10px;
+
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 40px;
+   
+}
+nav ul li a {
+    font-size: 1em;
+    display: inline-block;
+    text-decoration: none;
+    justify-content: center;
+    background-color:  #2E7D32;
+    color:  #F6FBFF;
+    padding: 6px;
+    border-radius: 4px;
+}
+
+/* ACTIVIDAD 5.3.1 TRANSICION EN ALGUN BOTON */
+button, nav ul li a {
+    transition: all 0.3s ease;/*acelera inicio, retarda y acelera al salir*/
+}
+
+nav ul li a:hover {
+    background-color: #1886A4;
+    color: #eee;
+    padding: 7px;
+}
+
+/*estilo de titulos y parrafo*/
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2em;
+    color: #266b29; 
+    text-align: center;
+    font-weight: bold;
+}
+h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+    color: #212121;    
+}
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+    text-align: justify;
+    color: #7e8385;
+}
+
+/*hide para que los float no se desborden*/
+section {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 10px;
+
+}
+/*a la izqueirda*/
+article {
+    float: left;
+    width: 60%;
+    padding: 10px;
+}
+
+/*a la derecha*/
+aside {
+    float: right;
+    width: 30%;
+    padding: 10px;
+    margin-top: 0;/*queda mucho espacio arriba del aside*/
+}
+
+/*estilo del form*/
+.formulario {
+    float: right;
+    width: 30%; /*igual que el aside*/
+    padding: 10px;
+    clear: right;
+}
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="tel"]{
+    background-color:  #F6FBFF;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    width: 200px;
+}
+textarea {
+    background-color:  #F6FBFF;
+}
+button {
+    background-color:  #2E7D32;
+    color:  #F6FBFF;
+    padding: 5px;
+    border-radius: 7px;
+    border: none;
+}
+button:hover {
+    background-color: #1886A4;
+    color: #eee;
+    padding: 4px;
+}
+
+/*estilo de footer, cookies y social media*/
+.mapa {
+    float: left;
+    width: 60%;
+    margin: 10px;
+}
+.datosDeContacto { 
+    width: 35%;
+    display: inline;
+    padding: 15px;
+}
+
+.politicaPrivacidad,.mapa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  clear: both;
+}
+
+.footer {
+    border-top:1px solid #e5e7eb;
+    clear: both;
+}
+
+/*whatsapp fijo a la derecha*/
+.whatsapp-fijo {
+    position: fixed;
+    right: 16px;
+    bottom: 15px;
+    width: 58px;
+    height: 60px;
+    border-radius: 50%;
+    display: block;
+}
+
+/*pagina servicios*/
+.servicios-img img{
+    width: auto;
+    height: 150px;
+}
+
+/* ACTIVIDAD 4.7.1 USO DE not() y */
+img:not([alt]) {
+    border: 3px solid red;
+}
+/* ACTIVIDAD 4.7.1 USO DE href .pdf y */
+a[href$=".pdf"]::after {
+    content: url("assets/images/pdf.png");
+    margin-left: 6px;
+    vertical-align: middle;
+}
+
+/* ACTIVIDAD 5.4.1 TRANSFORMACION */
+.logo-enlace img:hover {
+    transform: rotate(45deg);
+    /*transform: scale(1.05);*/
+}
+
+
+/*estilo tabla con padre */
+.contenedor {
+    width: 100%;
+}
+
+table {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /*width: 100%; esto haria lo mismo que el contenedor (lo cree despues)?? */
+    border-collapse: collapse; /* Une los bordes */
+    margin: 20px auto;
+}
+
+caption {
+    caption-side: bottom;/*titulo abajo*/
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+th {
+    background-color: #3FB7B1;
+    color: #212121; /*para que no cambie el texto con hover*/
+    font-size: 1em;
+}
+
+th, td {
+    border: 1px solid #555;
+    padding: 8px 12px;
+    text-align: center;
+    font-size: 1em;
+} 
+
+/*primera linea no se aprecia porq la primera tambien tine formato*/
+tbody tr:first-child {
+    background-color:  #ec551a;
+}
+
+/*uso de even y odd*/
+tbody tr:nth-child(odd) {/*impares*/
+    background-color: #7e8385;
+}
+
+tr:nth-child(even) {/*pares*/
+    background-color:  #EEEEEE; 
+   
+}
+
+tr:hover {
+    background-color: #1A6EEB;
+    color: #F6FBFF;
+}
+
+/*estilo para los estados de los enlaces*/
+nav a:link {
+    color:  #86a418;
+}
+nav a:visited {
+    color: #101cc7;
+}
+aside a:link {
+   color: #86a418; 
+}
+aside a:visited {
+    color: #c75910;
+}
+aside a:hover {
+    color: #1886A4;
+}
+aside a:active {
+    color: #18a442;
+}
+footer a:link {
+    color: #86a418;
+    text-decoration: none;
+}
+footer a:visited {
+    color: #101cc7;
+}
+footer a:active {
+     color: #18a442;
+}
+footer a:hover {
+    color: #1886A4;
+    text-decoration: dotted;
+}
+
+/* MEIDA PARA MOVIL */
+@media (max-width: 699px) {
+  body,
+  h1, h2, h3, h4,
+  p, li, a,
+  input, textarea, button,
+  th, td, caption {
+    font-family: "Times New Roman", Times, serif;
+  }
+}
+
+@media (max-width: 699px) {
+
+  /* LOGO MAS PEQUEÑO */
+  .logo-enlace img {
+    height: 100px;
+  }
+
+  /* EN COLUMNA */
+  nav ul {
+    padding: 5px;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 5px 0;
+  }
+
+  nav ul li a {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* CONTENIDO APILADO */
+  section {
+    margin-top: 10px;
+  }
+
+  article,
+  aside {
+    float: none;
+    width: 100%;
+    padding: 10px;
+  }
+
+  /* FORMULARIO MAS COMPLETO */
+  .formulario {
+    float: none;
+    width: 100%;
+    margin: 10px auto;
+  }
+
+  /* FOOTER MAPA Y DEBAJO */
+  .mapa,
+  .datosDeContacto {
+    float: none;
+    width: 100%;
+    margin: 10px auto;
+  }
+
+  /* Tabla de servicios se sale- con scroll horizontal si no cabe */
+  .contenedor-tabla {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .contenedor-tabla table {
+    min-width: 500px;
+  }
+}
+
+
+/* MEDIA PARA TABLET */
+@media (min-width: 700px) and (max-width: 1199px) {
+  body,
+  h1, h2, h3, h4,
+  p, li, a,
+  input, textarea, button,
+  th, td, caption {
+    font-family: Calibri, "Segoe UI", sans-serif;
+  }
+}
+/*  TABLET 700–1199px: DOS COLUMNAS LIMPIAS === */
+@media (min-width: 700px) and (max-width: 1199px) {
+
+  /* MENU COMPACTO*/
+  nav ul li {
+    margin-right: 20px;
+  }
+
+  /* Artículos y aside en dos columnas */
+  article {
+    float: left;
+    width: 60%;
+    padding: 10px;
+  }
+
+  aside {
+    float: right;
+    width: 30%;
+    padding: 10px;
+  }
+
+  /* FORMULARIO MAS ACVHO */
+  .formulario {
+    float: right;
+    width: 40%;
+  }
+
+  /* FOOTER */
+  .mapa {
+    float: left;
+    width: 55%;
+  }
+
+  .datosDeContacto {
+    float: right;
+    width: 40%;
+  }
+
+  /* TABLA ANCHO COMPLETO */
+  .contenedor-tabla table {
+    width: 100%;
+  }
+}
+
+
+/* MEDIA PARA PC - SOLO TIPOGRAFIA ERA MUY EXTENSO  */
+@media (min-width: 1200px) {
+  body,
+  h1, h2, h3, h4,
+  p, li, a,
+  input, textarea, button,
+  th, td, caption {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+}
+
+
+/* ACTIVIDAD 4.11.1 FLEX-WRAP, JUSTIFY-CONTEN, ALIGN-ITEMS */
+.flex-ejemplo {
+    display: flex;                  /* contenedor flex */
+    flex-wrap: wrap;                /* permite saltar de línea */
+    justify-content: space-between; /* reparte el espacio horizontal */
+    align-items: center;            /* alinea verticalmente los items */
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 20px;
+    background-color: #fff7e4;
+}
+
+.item-flex {
+    background-color: #2E7D32;
+    color: #F6FBFF;
+    padding: 10px;
+    margin: 5px;
+    width: 120px;                   /* ancho fijo para ver bien el wrap */
+    text-align: center;
+    border-radius: 4px;
+}
+

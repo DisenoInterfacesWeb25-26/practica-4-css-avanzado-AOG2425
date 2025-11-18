@@ -1,0 +1,22 @@
+/* quitar lo que no debe imprimirse */
+header,
+nav,
+aside,
+footer {
+    display: none !important;
+}
+
+/* ajustar cuerpo para que se vea bonito al imprimir */
+body {
+    font-size: 12pt;
+    line-height: 1.4;
+    margin: 20px;
+    color: #000;
+}
+
+/* quitar fondos opcional */
+* {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+}

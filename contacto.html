@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="formulario de contacto">
+    <meta name="author" content="AOG2526">
+    <title>Página de contacto</title>
+     <link rel="stylesheet" type="text/css" media="print" href="assets/css/paginaImpresion.css">
+</head>
+<body>
+
+      <!--Formulario-->
+        <form class="formulario">
+            <h2>Formulario de consulta</h2>
+          
+          <label for="nombre">Nombre:</label><br>
+              <input type="text" id="nombre" name="nombre" maxlength="40" pattern="[A-Za-Z0-9]+" placeholder="Escribe tu nombre" autofocus required><br/>
+          <label for="email">Email:</label><br>
+              <input type="email" id="email" name="email" placeholder="correo@correo.com" required><br/>
+          <label for="edad">Edad:</label><br>
+              <input type="number" id="edad" name="edad" min="18" max="99" placeholder="Edad" required><br/>
+          <label for="telefono">Teléfono:</label><br>
+              <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9}" placeholder="615243625" required><br/>
+          <label for="consulta">Consulta:</label><br>
+              <textarea id="consulta" name="consulta" placeholder="Escribe tu consulta...." rows="5" cols="28" required></textarea><br/>
+          <input type="checkbox" id="privacidad" name="privacidad" required>
+          <label for="privacidad" >Aceptación de política de privacidad y cookies</label><br/><br>
+          <button type="submit">Enviar consulta</button><br/>
+          
+        </form>
+    
+</body>
+</html>

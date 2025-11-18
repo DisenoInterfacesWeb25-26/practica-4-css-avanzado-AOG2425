@@ -1,0 +1,89 @@
+/* igual q index */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+}
+
+/*aplico un borde*/
+header, nav, footer {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+/*floats*/
+article {
+    float: left;
+    width: 65%;
+    padding: 10px;
+}
+
+aside {
+    float: right;
+    width: 30%;
+    padding: 10px;
+}
+
+/* CLEAR del footer */
+footer {
+    clear: both;
+    text-align: center;
+}
+
+/* media para movil - times new roman*/
+@media (max-width: 699px) {
+    body,
+    h1, h2, h3, p, li {
+        font-family: "Times New Roman", Times, serif;
+    }
+
+    nav ul li {
+        display: block;/*una debajo de otra*/
+        margin: 8px 0;
+    }
+
+    article, aside {
+        float: none;
+        width: 100%;
+    }
+}
+
+/* media para tablet - calibri - a partir de 700 hasta 1200 */
+@media (min-width: 700px) and (max-width: 1199px) {
+    body,
+    h1, h2, h3, p, li {
+        font-family: Calibri, "Segoe UI", sans-serif;
+    }
+
+    article {
+        width: 60%;
+    }
+
+    aside {
+        width: 35%;
+    }
+}
+
+/* media para pc - arial - solo aplico letra*/
+@media (min-width: 1200px) {
+    body,
+    h1, h2, h3, p, li {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+}
